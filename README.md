@@ -1,5 +1,5 @@
-# Ex.07 interative photo gallery
-## Date:12/11/24
+# Ex.07 INTERACTIVE PHOTO GALLERY
+## Date:12.11.2024
 
 ## AIM:
 To design a book front cover page using HTML and CSS.
@@ -31,8 +31,7 @@ Insert the images in their appropriate places.
 Publish the website in the LocalHost.
 
 ## PROGRAM:
-
-## index.html:
+## INDEX.HTML
 ```
 <!DOCTYPE html>
 <html lang="en">
@@ -58,7 +57,7 @@ Publish the website in the LocalHost.
 </body>
 </html>
 ```
-## style.css:
+## STYLE.CSS
 ```
 body{
     margin: 2%;
@@ -67,8 +66,8 @@ body{
 }
 #image{
 line-height:100px;
-    width: 375px;
-height: 150px;
+    width: 355px;
+height: 170px;
     border:5px solid black;
     margin:0 auto;
 background-color: #8e68ff;
@@ -89,8 +88,7 @@ img{
     width:95%;
 }
 ```
-
-## script.js:
+## SCRIPTS.JS
 ```
 // Reference to the image container
 const imageDiv = document.getElementById('image');
@@ -99,7 +97,7 @@ const originalText = "Hover over an image below to display here."; // Original t
 
 function upDate(previewPic) {
     // Change the background image to the source of the hovered image
-    imageDiv.style.backgroundImage = `url('${previewPic.src}')`;
+    imageDiv.style.backgroundImage = url('${previewPic.src}');
     
     // Update the text to the alt text of the hovered image
     imageDiv.innerHTML = previewPic.alt;
@@ -107,15 +105,13 @@ function upDate(previewPic) {
 
 function unDo() {
     // Reset the background image to the original URL
-    imageDiv.style.backgroundImage = `url('${originalImageUrl}')`; // Use the original image URL here
+    imageDiv.style.backgroundImage = url('${originalImageUrl}'); // Use the original image URL here
     
     // Change the text back to the original text
     imageDiv.innerHTML = originalText;
-    
- ```
-
+```
 ## OUTPUT:
-![alt text](<Screenshot (215).png>)
+![Screenshot 2024-11-13 220028](https://github.com/user-attachments/assets/2b0b44cd-432f-4e64-bb8f-a61772f888cc)
 
 ## RESULT:
 The program for designing book front cover page using HTML and CSS is completed successfully.
