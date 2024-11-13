@@ -1,5 +1,5 @@
-# Ex.07 INTERACTIVE PHOTO GALLERY
-## Date:12.11.2024
+# Ex.06 Book Front Cover Page Design
+## Date: 25/10/2024
 
 ## AIM:
 To design a book front cover page using HTML and CSS.
@@ -31,87 +31,135 @@ Insert the images in their appropriate places.
 Publish the website in the LocalHost.
 
 ## PROGRAM:
-## INDEX.HTML
+book.html
 ```
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Photo Gallery</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <h1>Interactive Photo Gallery</h1>
-    <div id="image">Hover over an image below to display here.</div>
-    
-    <div class="gallery">
-        <img class = "preview" alt = "Night Sky" src = "https://images.pexels.com/photos/1624496/pexels-photo-1624496.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" onmouseover = "upDate(this)" onmouseout = "unDo()">
-	    <img class = "preview" alt = "Rose" src = "https://images.pexels.com/photos/736230/pexels-photo-736230.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" onmouseover = "upDate(this)" onmouseout = "unDo()">
-	    <img class = "preview" src = "https://images.pexels.com/photos/2130610/pexels-photo-2130610.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt = "Paris" onmouseover = "upDate(this)" onmouseout = "unDo()">
-        <img class = "preview" alt = "Turtle" src = "https://images.pexels.com/photos/5277693/pexels-photo-5277693.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" onmouseover = "upDate(this)" onmouseout = "unDo()">
-	    <img class = "preview" alt = "Cute Puppy" src = "https://images.pexels.com/photos/3687770/pexels-photo-3687770.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" onmouseover = "upDate(this)" onmouseout = "unDo()">
-	    <img class = "preview" src = "https://images.pexels.com/photos/1648377/pexels-photo-1648377.jpeg?auto=compress&cs=tinysrgb&w=600" alt = "Baby" onmouseover = "upDate(this)" onmouseout = "unDo()">
-    </div>
-    <script src="script.js"></script>
-</body>
+    <head>
+        <meta name="viewport"
+        content="width=device-width,initial-scale=1.0">
+        <style>
+        
+        .bookpage{
+            width: 400px;
+            height: 600px;
+            color:rgb(10, 10, 10);
+            margin-left: auto;
+            margin-right: auto;
+            padding:20px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background-image: url('BOOK.jpg');
+            background-size: cover;
+        }
+
+        .insight{
+            color:rgb(13, 6, 6) ;
+
+        }
+
+        .hrstyle{
+            width: 100px;
+        }
+
+        .author{
+            color: rgb(76, 137, 29);
+            display: inline;
+            position: relative;
+            color: rgb(32, 174, 176);
+            top: 220px;
+
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: medium;
+        }
+        .booktitle{
+            font-family: 'Courier New', Courier, monospace;
+            font-size: larger;
+            text-align: center;
+            position: relative;
+            top: 60px;
+        }
+
+        .id{
+            width: 410px;
+            position: relative;
+            top: 210px;
+
+        }
+
+        .pub{
+            font-size: large;
+            position: relative;
+            top: 170px;
+            left: 300px;
+        }
+        .ed{
+            color: rgb(133, 34, 118);
+            font-size: medium;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            position: relative;
+            top: 110px;
+
+        }
+        .subtitle{
+            font-family: Tahoma;
+            font-size: large;
+            position: relative;
+            top: 70px;
+        }
+        .mypic{
+            position: relative;
+            top: 180px;
+            left: 260px;
+            width: 100px;
+            height: 100px;
+            background-size: cover;
+        }
+        </style>
+        <title>Book Cover Page</title>
+    </head>
+    <body>
+        <div class="bookpage">
+            <div class="EXPERT INSIGHT">
+                SEC INSIGHT
+            </div>
+            <div class="hrstyle">
+                <hr style="color: rgb(10, 10, 10);">
+            </div>
+            <div class="booktitle">
+                <h1>BASICS OF WEB DEVELOPMENT</h1>
+            </div>
+            <div class="subtitle">
+            Basic Guide For Beginners
+            </div>
+            <div class="mypic">
+                <img src="my image.jpg" width="120" height="120" alt="Error">
+            </div>
+            <div class="id">
+                <hr style="color:rgb(10, 10, 10);">
+            </div>
+            <div class="author">
+                <p><b>PRIYADHARSHINI.P</b></p>
+            </div>
+            <div class="pub">
+                SEC
+            </div>
+            <div class="ed">
+                <b>Extended Edition</b>
+            </div>
+        </div>
+    </body>
 </html>
 ```
-## STYLE.CSS
-```
-body{
-    margin: 2%;
-    border: 1px solid black;
-    background-color: #b3b3b3;
-}
-#image{
-line-height:100px;
-    width: 355px;
-height: 170px;
-    border:5px solid black;
-    margin:0 auto;
-background-color: #8e68ff;
-background-image: url('');
-background-repeat: no-repeat;
-color:#FFFFFF;
-text-align: center;
-background-size: 100%;
-margin-bottom:25px;
-font-size: 120%;
-}
-.preview{
-    width:10%;
-    margin-left:17%;
-border: 9px solid black;
-}
-img{
-    width:95%;
-}
-```
-## SCRIPTS.JS
-```
-// Reference to the image container
-const imageDiv = document.getElementById('image');
-const originalImageUrl = ''; // Set this to the URL of your original image
-const originalText = "Hover over an image below to display here."; // Original text
 
-function upDate(previewPic) {
-    // Change the background image to the source of the hovered image
-    imageDiv.style.backgroundImage = url('${previewPic.src}');
-    
-    // Update the text to the alt text of the hovered image
-    imageDiv.innerHTML = previewPic.alt;
-}
-
-function unDo() {
-    // Reset the background image to the original URL
-    imageDiv.style.backgroundImage = url('${originalImageUrl}'); // Use the original image URL here
-    
-    // Change the text back to the original text
-    imageDiv.innerHTML = originalText;
-```
 ## OUTPUT:
+![vp (1)](https://github.com/user-attachments/assets/6a1fb5f4-a439-4ad5-a42d-0c45cc886ecc)
 
-![alt text](image.png)
+
+
+
+
+
+
+
 ## RESULT:
 The program for designing book front cover page using HTML and CSS is completed successfully.
