@@ -111,7 +111,8 @@ function unDo() {
     imageDiv.innerHTML = originalText;
 ```
 ## OUTPUT:
-![vp (1)](https://github.com/user-attachments/assets/4e964daa-2a59-448d-962a-5104cdb704f5)
+![IMG_5703](https://github.com/user-attachments/assets/a1467e42-257f-46e1-a5f2-1789dfee5891)
+
 
 ## RESULT:
 The program for designing book front cover page using HTML and CSS is completed successfully.
