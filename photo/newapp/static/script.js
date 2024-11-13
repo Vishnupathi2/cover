@@ -17,3 +17,4 @@ function unDo() {
     
     // Change the text back to the original text
     imageDiv.innerHTML = originalText;
+}
