@@ -1,72 +1,11 @@
-# Ex.06 Book Front Cover Page Design
-## Date:
+# Ex.07 interative photo gallery
+## Date:12/11/24
 
 ## AIM:
 To design a book front cover page using HTML and CSS.
 
 ## DESIGN STEPS:
-CSS : 
-```
-body{
-    color:rgb(255, 255, 255);
-    font-family: Helvetica, sans-serif;
-    background-color: #333
-}
 
-.book{
-    width: 726px;
-    height:891px;
-    background-color:rgb(0, 0, 0);
-    margin:auto;
-    position: relative;
-    background-image: url(Wake\ up\ dadd\'s\ home___.jpg);
-    background-repeat: no-repeat;
-    background-size:606px;
-    background-position: bottom 150px center;
-}
-h1{
-    font-size:60px;
-    margin:60px;
-    margin-bottom:0px;
-}
-h3{
-    margin:0px 0px 90px 60px;
-    position: absolute;
-    bottom:0px;
-    font-size: x-large;
-    color: #f47027;
-}
-h4{
-    font-size:20px;
-    margin:60px;
-   margin-top:10px;
-   width:430px;
-}
-#top{
-    border-bottom:2px solid #f47027;
-    padding:100px 0px 5px 30px;
-}
-footer{
-    position: absolute;
-    bottom: 0px;
-    border-top:2px solid #f47027;
-    padding-top:10px;
-    width:726px;
-}
-#HASH {
-    display: flex;
-    justify-content: space-between;
-}
-  #HASH span{
-    margin:10px 0px 20px 60px;
-    font-size: xx-large;
-    font-weight: bold;
-  }
-  #end{
-    padding-right:60px;
-    font-size: 90px;
-  }
-```
 ### Step 1:
 Create a Django Admin project.
 
@@ -92,34 +31,91 @@ Insert the images in their appropriate places.
 Publish the website in the LocalHost.
 
 ## PROGRAM:
-HTML : 
+
+## index.html:
 ```
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>THERMO NUCLEAR ASTREO PHYSICS</title>
-        <link rel="stylesheet" href="css.css">
-    </head>
-    <body>
-        <section class="book">
-            <br><br>
-        <span id="top">EXPERT INSIGHT &nbsp;&nbsp;&nbsp;</span>
-            <h1>THERMO NUCLEAR ASTREO PHYSICS</h1>
-            <h4>FUELING THE UNIVERS : The Science Behind Stellar Power and Thermonuclear Fusion</h4>
-            <h3>69<sup>th</sup> EDITION </h3>
-            <footer>
-                <div id="HASH" class="blue-msg">
-                    <span>LUCIFER MORNINGSTAR</span>
-                    <span id="end"><u>DEVIL X></u></span>
-                </div>
-            </footer>
-    </section>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Photo Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Interactive Photo Gallery</h1>
+    <div id="image">Hover over an image below to display here.</div>
+    
+    <div class="gallery">
+        <img class = "preview" alt = "Night Sky" src = "https://images.pexels.com/photos/1624496/pexels-photo-1624496.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" onmouseover = "upDate(this)" onmouseout = "unDo()">
+	    <img class = "preview" alt = "Rose" src = "https://images.pexels.com/photos/736230/pexels-photo-736230.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" onmouseover = "upDate(this)" onmouseout = "unDo()">
+	    <img class = "preview" src = "https://images.pexels.com/photos/2130610/pexels-photo-2130610.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt = "Paris" onmouseover = "upDate(this)" onmouseout = "unDo()">
+        <img class = "preview" alt = "Turtle" src = "https://images.pexels.com/photos/5277693/pexels-photo-5277693.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" onmouseover = "upDate(this)" onmouseout = "unDo()">
+	    <img class = "preview" alt = "Cute Puppy" src = "https://images.pexels.com/photos/3687770/pexels-photo-3687770.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" onmouseover = "upDate(this)" onmouseout = "unDo()">
+	    <img class = "preview" src = "https://images.pexels.com/photos/1648377/pexels-photo-1648377.jpeg?auto=compress&cs=tinysrgb&w=600" alt = "Baby" onmouseover = "upDate(this)" onmouseout = "unDo()">
+    </div>
+    <script src="script.js"></script>
+</body>
 </html>
 ```
+## style.css:
+```
+body{
+    margin: 2%;
+    border: 1px solid black;
+    background-color: #b3b3b3;
+}
+#image{
+line-height:100px;
+    width: 375px;
+height: 150px;
+    border:5px solid black;
+    margin:0 auto;
+background-color: #8e68ff;
+background-image: url('');
+background-repeat: no-repeat;
+color:#FFFFFF;
+text-align: center;
+background-size: 100%;
+margin-bottom:25px;
+font-size: 120%;
+}
+.preview{
+    width:10%;
+    margin-left:17%;
+border: 9px solid black;
+}
+img{
+    width:95%;
+}
+```
+
+## script.js:
+```
+// Reference to the image container
+const imageDiv = document.getElementById('image');
+const originalImageUrl = ''; // Set this to the URL of your original image
+const originalText = "Hover over an image below to display here."; // Original text
+
+function upDate(previewPic) {
+    // Change the background image to the source of the hovered image
+    imageDiv.style.backgroundImage = `url('${previewPic.src}')`;
+    
+    // Update the text to the alt text of the hovered image
+    imageDiv.innerHTML = previewPic.alt;
+}
+
+function unDo() {
+    // Reset the background image to the original URL
+    imageDiv.style.backgroundImage = `url('${originalImageUrl}')`; // Use the original image URL here
+    
+    // Change the text back to the original text
+    imageDiv.innerHTML = originalText;
+    
+ ```
 
 ## OUTPUT:
-![ex6_pages-to-jpg-0001](https://github.com/user-attachments/assets/61b38d2a-e85d-4b51-a668-2680aea53521)
+![alt text](<Screenshot (215).png>)
 
 ## RESULT:
 The program for designing book front cover page using HTML and CSS is completed successfully.
