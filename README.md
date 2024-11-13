@@ -1,4 +1,4 @@
-# Ex.07 INTERACTIVE PHOTO GALLERY
+[[# Ex.07 INTERACTIVE PHOTO GALLERY
 ## Date:12.11.2024
 
 ## AIM:
@@ -111,7 +111,8 @@ function unDo() {
     imageDiv.innerHTML = originalText;
 ```
 ## OUTPUT:
-![Screenshot 2024-11-13 220028](https://github.com/user-attachments/assets/2b0b44cd-432f-4e64-bb8f-a61772f888cc)
+![vp (1)](https://github.com/user-attachments/assets/4e964daa-2a59-448d-962a-5104cdb704f5)
 
 ## RESULT:
 The program for designing book front cover page using HTML and CSS is completed successfully.
+](https://github.com/selvasachein/cover)](https://github.com/selvasachein/cover)
